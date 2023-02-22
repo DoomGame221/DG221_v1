@@ -65,7 +65,7 @@ dg1Tab:AddDropdown({
  end    
 })
 
-//---Tap2---//
+---Tap2---
 
 local dg2Tab = Window:MakeTab({
  Name = "Tab 1",
@@ -121,6 +121,5 @@ dg2Tab:AddDropdown({
   print(Value)
  end    
 })
-
 
 OrionLib:Init()
