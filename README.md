@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "wan", HidePremium = true,
+local Window = OrionLib:MakeWindow({Name = "wan", HidePremium = false,
     IntroText = "DG221", SaveConfig = true, ConfigFolder = "wan"})
 
 OrionLib:MakeNotification({
