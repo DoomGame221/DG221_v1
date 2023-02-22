@@ -65,8 +65,4 @@ local Section = TutTab:AddSection({
  end    
 })
 
-//---Tap2---//
-
-
-
 OrionLib:Init()
