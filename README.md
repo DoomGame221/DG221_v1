@@ -65,4 +65,62 @@ dg1Tab:AddDropdown({
  end    
 })
 
+//---Tap2---//
+
+local dg2Tab = Window:MakeTab({
+ Name = "Tab 1",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+
+local Section = dg2Tab:AddSection({
+ Name = "DG221 Section"
+})
+
+dg2Tab:AddButton({
+ Name = "Button!",
+ Callback = function()
+        print("button pressed")
+   end    
+})
+
+dg2Tab:AddToggle({
+ Name = "This is a toggle!",
+ Default = false,
+ Callback = function(Value)
+  print("Subscribe")
+ end    
+})
+
+dg2Tab:AddColorpicker({
+ Name = "Colorpicker",
+ Default = Color3.fromRGB(255, 0, 0),
+ Callback = function(Value)
+  print(Value)
+ end   
+})
+
+dg2Tab:AddSlider({
+ Name = "Slider",
+ Min = 0,
+ Max = 20,
+ Default = 5,
+ Color = Color3.fromRGB(255,255,255),
+ Increment = 1,
+ ValueName = "bananas",
+ Callback = function(Value)
+  print(Value)
+ end    
+})
+
+dg2Tab:AddDropdown({
+ Name = "Dropdown",
+ Default = "1",
+ Options = {"1", "2"},
+ Callback = function(Value)
+  print(Value)
+ end    
+})
+
+
 OrionLib:Init()
