@@ -37,7 +37,7 @@ dg1Tab:AddToggle({
 
 dg1Tab:AddColorpicker({
  Name = "Colorpicker",
- Default = Color3.fromRGB(255, 0, 0),
+ Default = Color3.fromRGB(57, 255, 20),
  Callback = function(Value)
   print(Value)
  end   
