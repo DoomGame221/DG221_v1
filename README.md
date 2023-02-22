@@ -10,24 +10,24 @@ OrionLib:MakeNotification({
  Time = 5
 })
 
-local 1Tab = Window:MakeTab({
+local dg1Tab = Window:MakeTab({
  Name = "Tab 1",
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
 
-local Section = TutTab:AddSection({
+local Section = dg1Tab:AddSection({
  Name = "DG221 Section"
 })
 
-1Tab:AddButton({
+dg1Tab:AddButton({
  Name = "Button!",
  Callback = function()
         print("button pressed")
    end    
 })
 
-1Tab:AddToggle({
+dg1Tab:AddToggle({
  Name = "This is a toggle!",
  Default = false,
  Callback = function(Value)
@@ -35,7 +35,7 @@ local Section = TutTab:AddSection({
  end    
 })
 
-1Tab:AddColorpicker({
+dg1Tab:AddColorpicker({
  Name = "Colorpicker",
  Default = Color3.fromRGB(255, 0, 0),
  Callback = function(Value)
@@ -43,7 +43,7 @@ local Section = TutTab:AddSection({
  end   
 })
 
-1Tab:AddSlider({
+dg1Tab:AddSlider({
  Name = "Slider",
  Min = 0,
  Max = 20,
@@ -56,7 +56,7 @@ local Section = TutTab:AddSection({
  end    
 })
 
-1Tab:AddDropdown({
+dg1Tab:AddDropdown({
  Name = "Dropdown",
  Default = "1",
  Options = {"1", "2"},
