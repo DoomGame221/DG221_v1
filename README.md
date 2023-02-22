@@ -10,7 +10,7 @@ OrionLib:MakeNotification({
  Time = 5
 })
 
-local TutTab = Window:MakeTab({
+local 1Tab = Window:MakeTab({
  Name = "Tab 1",
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
@@ -20,14 +20,14 @@ local Section = TutTab:AddSection({
  Name = "DG221 Section"
 })
 
-TutTab:AddButton({
+1Tab:AddButton({
  Name = "Button!",
  Callback = function()
         print("button pressed")
    end    
 })
 
-TutTab:AddToggle({
+1Tab:AddToggle({
  Name = "This is a toggle!",
  Default = false,
  Callback = function(Value)
@@ -35,7 +35,7 @@ TutTab:AddToggle({
  end    
 })
 
-TutTab:AddColorpicker({
+1Tab:AddColorpicker({
  Name = "Colorpicker",
  Default = Color3.fromRGB(255, 0, 0),
  Callback = function(Value)
@@ -43,7 +43,7 @@ TutTab:AddColorpicker({
  end   
 })
 
-TutTab:AddSlider({
+1Tab:AddSlider({
  Name = "Slider",
  Min = 0,
  Max = 20,
@@ -56,7 +56,64 @@ TutTab:AddSlider({
  end    
 })
 
-Tab:AddDropdown({
+1Tab:AddDropdown({
+ Name = "Dropdown",
+ Default = "1",
+ Options = {"1", "2"},
+ Callback = function(Value)
+  print(Value)
+ end    
+})
+
+//---Tap2---//
+
+local 2Tab = Window:MakeTab({
+ Name = "Tab 2",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+
+local Section = TutTab:AddSection({
+ Name = "DG221 Section"
+})
+
+2Tab:AddButton({
+ Name = "Button!",
+ Callback = function()
+        print("button pressed")
+   end    
+})
+
+2Tab:AddToggle({
+ Name = "This is a toggle!",
+ Default = false,
+ Callback = function(Value)
+  print("Subscribe")
+ end    
+})
+
+2Tab:AddColorpicker({
+ Name = "Colorpicker",
+ Default = Color3.fromRGB(255, 0, 0),
+ Callback = function(Value)
+  print(Value)
+ end   
+})
+
+2Tab:AddSlider({
+ Name = "Slider",
+ Min = 0,
+ Max = 20,
+ Default = 5,
+ Color = Color3.fromRGB(255,255,255),
+ Increment = 1,
+ ValueName = "bananas",
+ Callback = function(Value)
+  print(Value)
+ end    
+})
+
+2Tab:AddDropdown({
  Name = "Dropdown",
  Default = "1",
  Options = {"1", "2"},
