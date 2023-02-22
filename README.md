@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "wan", HidePremium = false,
+local Window = OrionLib:MakeWindow({Name = "wan", HidePremium = true,
     IntroText = "DG221", SaveConfig = true, ConfigFolder = "wan"})
 
 OrionLib:MakeNotification({
@@ -18,6 +18,7 @@ local dg1Tab = Window:MakeTab({
 
 local Section = dg1Tab:AddSection({
  Name = "DG221 Section"
+ColorPicker:Set(Color3.fromRGB(57,255,20))
 })
 
 dg1Tab:AddButton({
@@ -102,8 +103,9 @@ dg2Tab:AddColorpicker({
 
 dg2Tab:AddSlider({
  Name = "Slider",
+ Slider:Set(2)
  Min = 0,
- Max = 20,
+ Max = 100,
  Default = 5,
  Color = Color3.fromRGB(255,255,255),
  Increment = 1,
