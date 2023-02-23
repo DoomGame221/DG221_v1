@@ -18,7 +18,6 @@ local dg1Tab = Window:MakeTab({
 
 local Section = dg1Tab:AddSection({
  Name = "DG221 Section"
-ColorPicker:Set(Color3.fromRGB(57,255,20))
 })
 
 dg1Tab:AddButton({
