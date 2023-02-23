@@ -102,7 +102,6 @@ dg2Tab:AddColorpicker({
 
 dg2Tab:AddSlider({
  Name = "Slider",
- Slider:Set(2)
  Min = 0,
  Max = 100,
  Default = 5,
