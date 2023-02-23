@@ -48,7 +48,7 @@ dg1Tab:AddSlider({
  Min = 0,
  Max = 20,
  Default = 5,
- Color = Color3.fromRGB(255,255,255),
+ Color = Color3.fromRGB(57,255,20),
  Increment = 1,
  ValueName = "bananas",
  Callback = function(Value)
@@ -102,7 +102,6 @@ dg2Tab:AddColorpicker({
 
 dg2Tab:AddSlider({
  Name = "Slider",
- Slider:Set(2)
  Min = 0,
  Max = 100,
  Default = 5,
