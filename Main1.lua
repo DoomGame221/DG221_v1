@@ -69,7 +69,7 @@ dg1Tab:AddDropdown({
 ---Tap2---
 
 local dg2Tab = Window:MakeTab({
- Name = "Tab 1",
+ Name = "Tab 2",
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
