@@ -40,6 +40,7 @@ Notification.new("Earned <Color=Yellow>1,000,000,000,000 Exp.<Color=/> (+ None)"
 
 Notification.new("Earned <Color=Green>$25,000<Color=/>"):Display()
 
+plr.Data.mastery.Value = plr.Data.mastery.Value + 599
 
 plr.Data.Beli.Value = plr.Data.Beli.Value + 9999999999
 
