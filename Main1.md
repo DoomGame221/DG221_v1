@@ -1,125 +1,82 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local plr = game:GetService("Players").LocalPlayer
 
-local Window = OrionLib:MakeWindow({Name = "wan", HidePremium = true,
-    IntroText = "DG221", SaveConfig = true, ConfigFolder = "wan"})
+local Notification = require(game:GetService("ReplicatedStorage").Notification)
 
-OrionLib:MakeNotification({
- Name = "HI!",
- Content = "i'm gay",
- Image = "rbxassetid://4483345998",
- Time = 5
-})
+local Data = plr:WaitForChild("Data")
 
-local dg1Tab = Window:MakeTab({
- Name = "Tab 1",
- Icon = "rbxassetid://4483345998",
- PremiumOnly = false
-})
+local EXPFunction = require(game.ReplicatedStorage:WaitForChild("EXPFunction"))
 
-local Section = dg1Tab:AddSection({
- Name = "DG221 Section"
-})
+local LevelUp = require(game:GetService("ReplicatedStorage").Effect.Container.LevelUp)
 
-dg1Tab:AddButton({
- Name = "Button!",
- Callback = function()
-        print("button pressed")
-   end    
-})
+local Sound = require(game:GetService("ReplicatedStorage").Util.Sound)
 
-dg1Tab:AddToggle({
- Name = "This is a toggle!",
- Default = false,
- Callback = function(Value)
-  print("Subscribe")
- end    
-})
+local LevelUpSound = game:GetService("ReplicatedStorage").Util.Sound.Storage.Other:FindFirstChild("LevelUp_Proxy") or game:GetService("ReplicatedStorage").Util.Sound.Storage.Other:FindFirstChild("LevelUp")
 
-dg1Tab:AddColorpicker({
- Name = "Colorpicker",
- Default = Color3.fromRGB(57, 255, 20),
- Callback = function(Value)
-  print(Value)
- end   
-})
+function v129(p15)
 
-dg1Tab:AddSlider({
- Name = "Slider",
- Min = 0,
- Max = 20,
- Default = 5,
- Color = Color3.fromRGB(57,255,20),
- Increment = 1,
- ValueName = "bananas",
- Callback = function(Value)
-  print(Value)
- end    
-})
+    local v130 = p15;
 
-dg1Tab:AddDropdown({
- Name = "Dropdown",
- Default = "1",
- Options = {"1", "2"},
- Callback = function(Value)
-  print(Value)
- end    
-})
+    while true do
 
----Tap2---
+        local v131, v132 = string.gsub(v130, "^(-?%d+)(%d%d%d)", "%1,%2");
 
-local dg2Tab = Window:MakeTab({
- Name = "Tab 2",
- Icon = "rbxassetid://4483345998",
- PremiumOnly = false
-})
+        v130 = v131;
 
-local Section = dg2Tab:AddSection({
- Name = "DG221 Section"
-})
+        if v132 == 0 then
 
-dg2Tab:AddButton({
- Name = "Button!",
- Callback = function()
-        print("button pressed")
-   end    
-})
+            break;
 
-dg2Tab:AddToggle({
- Name = "This is a toggle!",
- Default = false,
- Callback = function(Value)
-  print("Subscribe")
- end    
-})
+        end;    
 
-dg2Tab:AddColorpicker({
- Name = "Colorpicker",
- Default = Color3.fromRGB(255, 0, 0),
- Callback = function(Value)
-  print(Value)
- end   
-})
+    end;
 
-dg2Tab:AddSlider({
- Name = "Slider",
- Min = 0,
- Max = 100,
- Default = 5,
- Color = Color3.fromRGB(255,255,255),
- Increment = 1,
- ValueName = "bananas",
- Callback = function(Value)
-  print(Value)
- end    
-})
+    return v130;
 
-dg2Tab:AddDropdown({
- Name = "Dropdown",
- Default = "1",
- Options = {"1", "2"},
- Callback = function(Value)
-  print(Value)
- end    
-})
+end;
 
-OrionLib:Init()
+Notification.new("<Color=Yellow>QUEST COMPLETED!<Color=/>"):Display()
+
+Notification.new("Earned <Color=Yellow>1,000,000,000,000 Exp.<Color=/> (+ None)"):Display()
+
+Notification.new("Earned <Color=Green>$25,000<Color=/>"):Display()
+
+plr.Data.Exp.Value = 999999999999
+
+plr.Data.Beli.Value = plr.Data.Beli.Value + 9999999999
+
+delay = 0
+
+count = 0
+
+while plr.Data.Exp.Value - EXPFunction(Data.Level.Value) > 0 do
+
+    plr.Data.Exp.Value = plr.Data.Exp.Value - EXPFunction(Data.Level.Value)
+
+    plr.Data.Level.Value = plr.Data.Level.Value + 1
+
+    plr.Data.Points.Value = plr.Data.Points.Value + 3
+
+    LevelUp({ plr })
+
+    Sound.Play(Sound, LevelUpSound.Value)
+
+    Notification.new("<Color=Green>LEVEL UP!<Color=/> (" .. plr.Data.Level.Value .. ")"):Display()
+
+    count = count + 1
+
+    if count >= 5 then
+
+        delay = tick()
+
+        count = 0
+
+        wait(2)
+
+    end
+
+end
+
+
+
+
+
