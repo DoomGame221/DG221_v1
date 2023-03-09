@@ -40,9 +40,9 @@ Notification.new("Earned <Color=Yellow>1,000,000,000,000 Exp.<Color=/> (+ None)"
 
 Notification.new("Earned <Color=Green>$25,000<Color=/>"):Display()
 
-plr.Data.EXP.Value = plr.Data.EXP.Value + 599
+plr.Data.Exp.Value = 99999999999999
 
-plr.Data.Beli.Value = plr.Data.Beli.Value + 9999999999999999
+plr.Data.Beli.Value = plr.Data.Beli.Value + 99999999999999
 
 delay = 0
 
@@ -70,13 +70,8 @@ while plr.Data.Exp.Value - EXPFunction(Data.Level.Value) > 0 do
 
         count = 0
 
-        wait(2)
+        wait()
 
     end
 
 end
-
-
-
-
-
